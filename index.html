@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Music Quiz App</title>
+    <link rel="stylesheet" href="main.css" media="screen" title="Main Styles" charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <h1>Music Quiz</h1>
+    </header>
+    <div class="info">You've answered <span class="count">0</span> correctly out of 5 questions</div>
+    <button class="startButton">Click to start!</button>
+    <div class="question">
+        <p class="prompt">Name a major key signature with 1 sharp.</p>
+        <ul class="answers">
+            <li><button class="correct">G major</button></li>
+            <li><button>F major</button></li>
+            <li><button>C major</button></li>
+            <li><button>B major</button></li>
+        </ul>
+        <button class="submit">Submit</button>
+    </div>
+    <div class="question">
+        <p class="prompt">What type of note gets a full beat in 6/8 time?</p>
+        <ul class="answers">
+            <li><button>Quarter note</button></li>
+            <li><button>Sixteenth note</button></li>
+            <li><button>Whole note</button></li>
+            <li><button class="correct">Eighth note</button></li>
+        </ul>
+        <button class="submit">Submit</button>
+    </div>
+    <div class="question">
+        <p class="prompt">What notes make up the IV chord in the key of G major?</p>
+        <ul class="answers">
+            <li><button class="correct">C E G</button></li>
+            <li><button>G D F#</button></li>
+            <li><button>G B D</button></li>
+            <li><button>C F# A</button></li>
+        </ul>
+        <button class="submit">Submit</button>
+    </div>
+    <div class="question">
+        <p class="prompt">What family of instruments does a piano belong to?</p>
+        <ul class="answers">
+            <li><button>Woodwind</button></li>
+            <li><button>String</button></li>
+            <li><button class="correct">Percussion</button></li>
+            <li><button>Brass</button></li>
+        </ul>
+        <button class="submit">Submit</button>
+    </div>
+    <div class="question">
+        <p class="prompt">What is the relative minor key of A major?</p>
+        <ul class="answers">
+            <li><button>C minor</button></li>
+            <li><button>G minor</button></li>
+            <li><button class="correct">F# minor</button></li>
+            <li><button>B minor</button></li>
+        </ul>
+        <button class="submit">Submit</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

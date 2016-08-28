@@ -1,0 +1,34 @@
+Music Quiz:
+
+Name a major key signature with 1 sharp.
+  *G major
+  F major
+  C major
+  B major
+
+
+What type of note gets a full beat in 6/8 time?
+  Quarter note
+  Sixteenth note
+  Whole note
+  *Eighth note
+
+
+What notes make up the IV chord in the key of G major?
+  *G C E
+  G D F#
+  G B D
+  C F# A
+
+What family of instruments does a piano belong to?
+  String
+  *Percussion
+  Brass
+  Woodwind
+
+
+What is the relative minor key of A major?
+  C minor
+  G minor
+  *F# minor
+  B minor

@@ -7,6 +7,7 @@ $(document).ready(function() {
 $(".startButton").click(function() {
     $(this).hide();
     $(".question").first().show();
+    $(".info").show();
 });
 
 //Selecting answers functionality

@@ -4,7 +4,6 @@ $(".startButton").click(function() {
     $(".info").show();
     $(this).hide();
     $(".question").first().show();
-    currentQuestion = 1;
 });
 
 //Selecting answers functionality

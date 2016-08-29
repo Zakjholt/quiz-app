@@ -2,6 +2,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background: #eef;
 }
 
 .answers {
@@ -19,7 +20,7 @@ body {
 }
 
 .selected {
-  background: green;
+  background: skyblue;
 }
 
 .prompt {
@@ -28,4 +29,25 @@ body {
 
 .info {
   display: none;
+}
+
+
+.continue {
+  display: none;
+}
+
+.endGame {
+  display: none;
+}
+
+button {
+  padding: 20px;
+  margin: 5px;
+  border-radius: 5%;
+  background: #cfc;
+  border: none;
+}
+
+button:focus {
+  outline: 0;
 }

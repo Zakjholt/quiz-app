@@ -1,58 +1,70 @@
-newGame();
-//Start button functionality
+//Set answer Key
+var Key = {
+    i: "G major",
+    ii: "Eighth note",
+    iii: "C E G",
+    iv: "Percussion",
+    v: "F# minor"
+};
+
+var userAnswers = Object.create(Key);
+var correctAnswers;
+
+
 $(".startButton").click(function() {
-    $(".info").show();
-    $(this).hide();
-    $(".question").first().show();
-});
-
-//Selecting answers functionality
-$(".answers button").click(function() {
-    $(".answers button").removeClass("selected");
-    $(this).addClass("selected");
-});
-
-//When the user clicks a submit button
-$(".submit").click(function() {
-    if ($(this).closest(".question").find("button").hasClass("selected")) {
-        if ($(this).closest(".question").find(".selected").hasClass("correct")) {
-            correctAnswers++;
-            updateAnswers();
-            $(this).closest(".question").hide();
-            $(this).closest(".question").next().show();
-            currentQuestion++;
-        } else { //The correct answer is highlighted, the submit button is replaced with a continue button
-            $(this).closest(".question").find(".selected").css("background", "red");
-            $(this).closest(".question").find(".correct").css("background", "green");
-            $(this).closest(".question").find(".continue").show();
-            $(this).hide();
-            $(".continue").click(function() {
-              $(this).closest(".question").hide();
-              $(this).closest(".question").next().show();
-              currentQuestion++;
-            });
-        }
-    }
-});
-
-if (currentQuestion > 5) {
-  $(".endGame").show();
-}
-
-$(".tryAgain").click(function() {
-  $(".endGame").hide();
+  $(this).closest("div").hide();
   newGame();
-  updateAnswers();
-  $(".info").hide();
 
 });
 
-function updateAnswers() {
-  $(".count").text(correctAnswers);
-}
+
+$(".answers button").click(function() {
+  $(".selected").removeClass("selected");
+  $(this).addClass("selected");
+});
+
+$(".submit").click(function() {
+  var input = this;
+  input.disabled = true;
+  setTimeout(function() {
+     input.disabled = false;
+  }, 3000);
+  var thisQuestion = $(this).closest(".question");
+  var nextQuestion = function() {
+    $(".question").hide();
+    $(".count").text(correctAnswers);
+    thisQuestion.next().show();
+  };
+  userAnswers[thisQuestion.prop("id")] = thisQuestion.find(".selected").text();
+  if (userAnswers[thisQuestion.prop("id")] === Key[thisQuestion.prop("id")]) {
+    correctAnswers++;
+    nextQuestion();
+  } else {
+    $(this).hide();
+    thisQuestion.find(".selected").addClass("red");
+    thisQuestion.find(".correct").addClass("green");
+    thisQuestion.find(".continue").show();
+    $(".continue").click(function() {
+      nextQuestion();
+    });
+  }
+});
+
+$(".endGame button").click(function() {
+  $(".green").removeClass("green");
+  $(".red").removeClass("red");
+  $(".continue").hide();
+  $(".submit").show();
+});
+
+//Functions
 
 function newGame() {
+  for (var prop in userAnswers) {
+    userAnswers[prop] = null;
+  }
   correctAnswers = 0;
-  currentQuestion = 0;
-  $(".startButton").show();
+  $(".count").text(correctAnswers);
+  $("#i").show();
+  $(".info").show();
 }

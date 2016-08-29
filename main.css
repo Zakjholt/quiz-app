@@ -1,53 +1,52 @@
 body {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background: #eef;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #eef;
 }
-
 .answers {
-  padding-left: 0;
+    padding-left: 0;
 }
 .answers li {
-  list-style: none;
-  padding: 5px;
-  display: inline-block;
+    list-style: none;
+    padding: 5px;
+    display: inline-block;
 }
-
 .question {
-  border: 1px solid black;
-  display: none;
+    border: 1px solid black;
+    display: none;
 }
-
 .selected {
-  background: skyblue;
+    background: skyblue;
 }
 
 .prompt {
-  font-wight: bold;
+    font-wight: bold;
 }
-
 .info {
-  display: none;
+    display: none;
 }
-
-
 .continue {
-  display: none;
+    display: none;
 }
-
 .endGame {
-  display: none;
+    display: none;
 }
-
 button {
-  padding: 20px;
-  margin: 5px;
-  border-radius: 5%;
-  background: #cfc;
-  border: none;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5%;
+    background: #cfc;
+    border: none;
+}
+button:focus {
+    outline: 0;
 }
 
-button:focus {
-  outline: 0;
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
 }

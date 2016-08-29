@@ -12,65 +12,109 @@
         <h1>Music Quiz</h1>
     </header>
     <div class="info">You've answered <span class="count">0</span> correctly out of 5 questions</div>
-    <button class="startButton">Click to start!</button>
-    <div class="question">
+
+    <div class="startScreen">
+        <button class="startButton">Click to start!</button>
+    </div>
+
+    <div class="question" id="i">
         <p class="prompt">Name a major key signature with 1 sharp.</p>
         <ul class="answers">
-            <li><button class="correct">G major</button></li>
-            <li><button>F major</button></li>
-            <li><button>C major</button></li>
-            <li><button>B major</button></li>
+            <li>
+                <button class="correct">G major</button>
+            </li>
+            <li>
+                <button>F major</button>
+            </li>
+            <li>
+                <button>C major</button>
+            </li>
+            <li>
+                <button>B major</button>
+            </li>
         </ul>
         <button class="submit">Submit</button>
         <button class="continue">Continue</button>
     </div>
-    <div class="question">
+    <div class="question" id="ii">
         <p class="prompt">What type of note gets a full beat in 6/8 time?</p>
         <ul class="answers">
-            <li><button>Quarter note</button></li>
-            <li><button>Sixteenth note</button></li>
-            <li><button>Whole note</button></li>
-            <li><button class="correct">Eighth note</button></li>
+            <li>
+                <button>Quarter note</button>
+            </li>
+            <li>
+                <button>Sixteenth note</button>
+            </li>
+            <li>
+                <button>Whole note</button>
+            </li>
+            <li>
+                <button class="correct">Eighth note</button>
+            </li>
         </ul>
         <button class="submit">Submit</button>
         <button class="continue">Continue</button>
     </div>
-    <div class="question">
+    <div class="question" id="iii">
         <p class="prompt">What notes make up the IV chord in the key of G major?</p>
         <ul class="answers">
-            <li><button class="correct">C E G</button></li>
-            <li><button>G D F#</button></li>
-            <li><button>G B D</button></li>
-            <li><button>C F# A</button></li>
+            <li>
+                <button class="correct">C E G</button>
+            </li>
+            <li>
+                <button>G D F#</button>
+            </li>
+            <li>
+                <button>G B D</button>
+            </li>
+            <li>
+                <button>C F# A</button>
+            </li>
         </ul>
         <button class="submit">Submit</button>
         <button class="continue">Continue</button>
     </div>
-    <div class="question">
+    <div class="question" id="iv">
         <p class="prompt">What family of instruments does a piano belong to?</p>
         <ul class="answers">
-            <li><button>Woodwind</button></li>
-            <li><button>String</button></li>
-            <li><button class="correct">Percussion</button></li>
-            <li><button>Brass</button></li>
+            <li>
+                <button>Woodwind</button>
+            </li>
+            <li>
+                <button>String</button>
+            </li>
+            <li>
+                <button class="correct">Percussion</button>
+            </li>
+            <li>
+                <button>Brass</button>
+            </li>
         </ul>
         <button class="submit">Submit</button>
         <button class="continue">Continue</button>
     </div>
-    <div class="question">
+    <div class="question" id="v">
         <p class="prompt">What is the relative minor key of A major?</p>
         <ul class="answers">
-            <li><button>C minor</button></li>
-            <li><button>G minor</button></li>
-            <li><button class="correct">F# minor</button></li>
-            <li><button>B minor</button></li>
+            <li>
+                <button>C minor</button>
+            </li>
+            <li>
+                <button>G minor</button>
+            </li>
+            <li>
+                <button class="correct">F# minor</button>
+            </li>
+            <li>
+                <button>B minor</button>
+            </li>
         </ul>
         <button class="submit">Submit</button>
         <button class="continue">Continue</button>
     </div>
     <div class="endGame">
-      <h3>Way to go!</h3>
-      <button class="tryAgain">Click to play again!</button>
+        <h3>Way to go!</h3>
+        <button class="startButton">Click to play again!</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="app.js"></script>
